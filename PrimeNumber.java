@@ -46,23 +46,14 @@ public class PrimeNumber extends JFrame {
 			if(valueInt == 1){
 				result.setText("False");
 			}
-			else if (valueInt == 2 || valueInt == 3 || valueInt == 5)
+			else 
 			{
-				result.setText("True");
-			} 
-			else if (valueInt % 2 == 0)
-			{
-				result.setText("False");
-			}
-			else if (valueInt % 3 == 0)
-			{
-				result.setText("False");
-			}
-			else if (valueInt % 5 == 0)
-			{
-				result.setText("False");
-			}
-			else {
+				for(int i = 2;i<valueInt;i++){
+					if(valueInt%i == 0){
+						result.setText("False");
+						return;
+					}
+				}
 				result.setText("True");
 			}
 		}
